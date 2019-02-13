@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact</title>
+    <meta charset="UTF-8">
+    <script src="../script/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../style/contact.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <section id="upperSection">
+        <header id="head">
+            <nav>
+                <a href="../index.html" class="logo" title="Enter your logo here"><i class="fab fa-lg fa-html5"></i></a>
+                <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/services.html"><i class="fas fa-cog"></i> Services</a>
+                <a href="#" class="active"><i id="activeAnim" class="fas fa-headset"></i> Contact</a>
+            </nav>
+        </header>
+
+        <div id="section1">
+            <div id="innerSection1">
+                <h1>Contact us 24/7</h1>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="formWrapper">
+        <form name="form1" action="/action.php" method="POST" onsubmit="return validateForm()">
+            <table class="table table-dark container">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">VALUE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Name and Surname:</th>
+                        <td><input type="text" id="name" placeholder="e.g. Peter Peterson" size="30px" class="curves"
+                                onfocus="focusFunc('name')" onblur="blurFunc('name')"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">City:</th>
+                        <td>
+                            <select name="city" id="city" class="curves">
+                                <option value="-1" selected>*choose city*</option>
+                                <option value="1">Beograd</option>
+                                <option value="2">Novi Sad</option>
+                                <option value="3">Nis</option>
+                                <option value="4">Jagodina</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ZIP Code:</th>
+                        <td>
+                            <input type="text" id="zip" placeholder="e.g. 11000" size="30px" class="curves" onfocus="focusFunc('zip')"
+                                onblur="blurFunc('zip')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Address and home number:</th>
+                        <td><input type="text" id="address" placeholder="e.g. Beogradska 21" size="30px" class="curves"
+                                onfocus="focusFunc('address')" onblur="blurFunc('address')"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Contact Phone:</th>
+                        <td><input type="text" id="phone" placeholder="e.g. 064-123-1234" size="30px" class="curves"
+                                onfocus="focusFunc('phone')" onblur="blurFunc('phone')"></td>
+                                <p id="p-alert"></p>
+                    </tr>
+                    <tr>
+                        <th scope="row">E-Mail Address:</th>
+                        <td><input type="text" id="email" placeholder="e.g. example@gmail.com" size="30px" class="curves"
+                                onfocus="focusFunc('email')" onblur="blurFunc('email')"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Enter Date:</th>
+                        <td><input type="text" id="date" placeholder="e.g. 11-11-2011" size="30px" class="curves"
+                                onfocus="focusFunc('date')" onblur="blurFunc('date')"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Describe your problem:</th>
+                        <td>
+                            <textarea id="textarea" rows="4" cols="28" maxlength="150" style="resize:none" placeholder="Enter your text here   *Maximum of 150 characters*"
+                                class="curves" onfocus="focusFunc('textarea')" onblur="blurFunc('textarea')"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Submit data:</th>
+                        <td><input type="submit" value="send order" class="sub-res-btn"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Not sure? Reset all data:</th>
+                        <td><input type="reset" value="reset all" class="sub-res-btn"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div> <!-- form wrapper end -->
+    <br><br>
+
+
+    <div id="social">
+        <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/?lang=en" target="_blank" title="Twitter"><i class="fab fa-twitter-square"></i></a>
+        <a href="https://rs.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/?hl=en" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+
+
+    <footer>
+        <p>Created by: Nikola Djekic &copy; 2019 <i class="fab fa-html5"></i> <i class="fab fa-css3-alt"></i>
+            Powered by: Engineering Software Lab doo</p>
+    </footer>
+
+</body>
+
+</html>
